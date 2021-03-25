@@ -1,0 +1,49 @@
+
+./Setup.hs,15
+main main1,2
+
+./test/Spec.hs,15
+main main0,1
+
+./src/Lib.hs,42
+module LibLib0,1
+someFunc someFunc4,5
+
+./src/Text/Digestive/Servant.hs,668
+module Text.Digestive.Servant Text.Digestive.Servant2,3
+class HasFormicSettings HasFormicSettings37,38
+  formicCookieSettings formicCookieSettings38,39
+newtype Formic Formic45,46
+  = Formic { runForm runForm46,47
+instance ( (Monad m, KnownSymbol name, MonadError ServerError m) => FE-FromForm (Formic name v m a)50,51
+  fromForm fromForm52,53
+type FormicRoute FormicRoute71,72
+type FormicGet FormicGet75,76
+newtype XSRFToken XSRFToken79,80
+newtype XSRFToken = UnsafeXSRFToken UnsafeXSRFToken79,80
+newtype XSRFToken = UnsafeXSRFToken { extractXSRFToken extractXSRFToken79,80
+formicServer formicServer103,104
+rightToMaybe rightToMaybe148,149
+
+./src/Text/Digestive/Servant/Cookie.hs,1068
+module Text.Digestive.Servant.CookieText.Digestive.Servant.Cookie1,2
+newtype ReqCookie ReqCookie20,21
+newtype ReqCookie (name :: Symbol) v = ReqCookie { unReqCookie unReqCookie20,21
+data CookieList CookieList25,26
+  CookieListEmpty CookieListEmpty26,27
+  CookieListCons CookieListCons27,28
+type OneCookie OneCookie32,33
+type ReqCookies ReqCookies35,36
+instance FromHttpApiData FromHttpApiData (CookieList '[])37,38
+  parseUrlPiece parseUrlPiece38,39
+  parseHeader parseHeader39,40
+instance ( (FromHttpApiData (CookieList xs), KnownSymbol name, FromHttpApiData x) => FromHttpApiData (CookieList (ReqCookie name x ': xs))41,42
+  parseUrlPiece parseUrlPiece45,46
+  parseHeader parseHeader46,47
+class HasCookie HasCookie63,64
+  getCookie getCookie64,65
+instance {-# OVERLAPPABLE #-} HasCookie HasCookie name v (ReqCookie name v ': rest)66,67
+  getCookie getCookie67,68
+instance {-# OVERLAPPABLE #-} HasCookie HasCookie name v rest => HasCookie name v (first ': rest)69,70
+  getCookie getCookie71,72
+maybeToRight maybeToRight75,76

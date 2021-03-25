@@ -1,0 +1,76 @@
+name:                digestive-functors-servant
+version:             0.1.0.0
+github:              "githubuser/digestive-functors-servant"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2021 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/digestive-functors-servant#readme>
+
+default-extensions:
+- ConstraintKinds
+- DeriveTraversable
+- QuasiQuotes
+- TupleSections
+- GeneralizedNewtypeDeriving
+- ViewPatterns
+- RankNTypes
+- DerivingVia
+- DataKinds
+- FlexibleContexts
+- FlexibleInstances
+- FunctionalDependencies
+- GADTs
+- KindSignatures
+- LambdaCase
+- RecordWildCards
+- MultiParamTypeClasses
+- MultiWayIf
+- OverloadedStrings
+- PolyKinds
+- ScopedTypeVariables
+- TypeFamilies
+- TypeOperators
+- TypeApplications
+- InstanceSigs
+
+dependencies:
+- base >= 3.7 && < 5
+- digestive-functors
+- transformers
+- servant
+- http-api-data
+- servant-auth
+- cookie
+- servant-auth-server
+- text
+- mtl
+- servant-server
+- bytestring
+
+library:
+  source-dirs: src
+
+
+tests:
+  digestive-functors-servant-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - digestive-functors-servant

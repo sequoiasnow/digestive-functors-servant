@@ -1,0 +1,74 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.3.
+--
+-- see: https://github.com/sol/hpack
+
+name:           digestive-functors-servant
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/digestive-functors-servant#readme>
+homepage:       https://github.com/githubuser/digestive-functors-servant#readme
+bug-reports:    https://github.com/githubuser/digestive-functors-servant/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/digestive-functors-servant
+
+library
+  exposed-modules:
+      Lib
+      Text.Digestive.Servant
+      Text.Digestive.Servant.Cookie
+  other-modules:
+      Paths_digestive_functors_servant
+  hs-source-dirs:
+      src
+  default-extensions: ConstraintKinds DeriveTraversable QuasiQuotes TupleSections GeneralizedNewtypeDeriving ViewPatterns RankNTypes DerivingVia DataKinds FlexibleContexts FlexibleInstances FunctionalDependencies GADTs KindSignatures LambdaCase RecordWildCards MultiParamTypeClasses MultiWayIf OverloadedStrings PolyKinds ScopedTypeVariables TypeFamilies TypeOperators TypeApplications InstanceSigs
+  build-depends:
+      base >=3.7 && <5
+    , bytestring
+    , cookie
+    , digestive-functors
+    , http-api-data
+    , mtl
+    , servant
+    , servant-auth
+    , servant-auth-server
+    , servant-server
+    , text
+    , transformers
+  default-language: Haskell2010
+
+test-suite digestive-functors-servant-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_digestive_functors_servant
+  hs-source-dirs:
+      test
+  default-extensions: ConstraintKinds DeriveTraversable QuasiQuotes TupleSections GeneralizedNewtypeDeriving ViewPatterns RankNTypes DerivingVia DataKinds FlexibleContexts FlexibleInstances FunctionalDependencies GADTs KindSignatures LambdaCase RecordWildCards MultiParamTypeClasses MultiWayIf OverloadedStrings PolyKinds ScopedTypeVariables TypeFamilies TypeOperators TypeApplications InstanceSigs
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=3.7 && <5
+    , bytestring
+    , cookie
+    , digestive-functors
+    , digestive-functors-servant
+    , http-api-data
+    , mtl
+    , servant
+    , servant-auth
+    , servant-auth-server
+    , servant-server
+    , text
+    , transformers
+  default-language: Haskell2010

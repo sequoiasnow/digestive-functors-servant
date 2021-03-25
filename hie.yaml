@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "digestive-functors-servant:lib"
+
+    - path: "./test"
+      component: "digestive-functors-servant:test:digestive-functors-servant-test"

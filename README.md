@@ -1,6 +1,8 @@
 # digestive-functors-servant
 
-A library allowing the use of [digestive-functors](http://hackage.haskell.org/package/digestive-functors) for [servant](http://hackage.haskell.org/package/servant) based
+A library allowing the use of
+[digestive-functors](http://hackage.haskell.org/package/digestive-functors) for
+[servant](http://hackage.haskell.org/package/servant) based
 applications. Because the point of servant is to ensure statically typed API's
 the standard `runForm` approach is rather underwhelming. Instead we introduce a
 new type `Formic` which wraps around the `runForm` behavior to allow the
@@ -80,3 +82,10 @@ loginHandler = formicServer loginForm (pure . loginView) $ \ (Login username _)
     return $ h1_ $ "Hello " <> toHtml username <> "!"
 
 ```
+
+### TODO
+
+This library was built with Lucid in mind, and the extraction of that dependency
+has created a number overly cumbersome type parameters. It might be best to
+single out the application for blaze and lucid, or refactor these slightly to
+avoid ambiguity.
